@@ -1,0 +1,25 @@
+import hashlib
+def compute_hash(file_path, algorithm="sha256"):
+ hasher = hashlib.new(algorithm)
+ with open(file_path, "rb") as f:
+ while chunk := f.read(4096):
+ hasher.update(chunk)
+ return hasher.hexd
+
+salt = os.urandom(16) # Generate 16-byte random salt
+hasher.update(salt + chunk)
+
+from cryptography.fernet import Fernet
+key = Fernet.generate_key() # Store this key securely!
+cipher = Fernet(key)
+encrypted_baseline = cipher.encrypt(baseline_hash.encode()) 
+
+def main():
+ parser = argparse.ArgumentParser(description="File Integrity
+Verifier")
+ parser.add_argument("--file", required=True, help="File to
+verify")
+ parser.add_argument("--algorithm", default="sha256", help="Hash
+algorithm")
+ args = parser.parse_args()
+ # ... (full code in appendix)
