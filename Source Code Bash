@@ -85,3 +85,10 @@ def main():
 
 if _name_ == "_main_":
     main()
+
+
+Bash file
+
+
+python file_integrity.py --file example.txt --algorithm sha256 --save-baseline
+python file_integrity.py --file example.txt --algorithm sha256
